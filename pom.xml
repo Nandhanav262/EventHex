@@ -26,10 +26,13 @@
         <artifactId>webdrivermanager</artifactId>
         <version>5.9.2</version>
     </dependency>
+    
     <dependency>
     	<groupId>com.obsqura</groupId>
     	<artifactId>7RMart</artifactId>
     	<version>0.0.1-SNAPSHOT</version>
     </dependency>
+    
+    
 </dependencies>
 </project>

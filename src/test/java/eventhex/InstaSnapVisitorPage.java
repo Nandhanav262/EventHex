@@ -12,8 +12,10 @@ import java.time.Duration;
 public class InstaSnapVisitorPage extends InstaSnapPage {
 
 	public static void main(String[] args) {
-	    ChromeOptions options = new ChromeOptions();	    
-	    options.addArguments("--use-fake-ui-for-media-stream");
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--use-fake-ui-for-media-stream");
+		
+
 	    WebDriver driver = new ChromeDriver(options);
 	    driver.manage().window().maximize();
 
