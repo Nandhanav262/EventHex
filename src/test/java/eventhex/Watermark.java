@@ -73,10 +73,7 @@ public class Watermark {
             System.out.println("Scale set!");
             System.out.println("Watermark arranged successfully!");
 
-        
-        
-	
-            
+      
             
         } catch (Exception e) {
             e.printStackTrace();
