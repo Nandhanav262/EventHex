@@ -20,6 +20,7 @@ public class ContributeAlbum {
 	    WebDriver driver = new ChromeDriver(options);
 	    driver.manage().window().maximize();
 
+	    
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
         try {
@@ -32,7 +33,8 @@ public class ContributeAlbum {
             passwordField.sendKeys("Admin@EventHex");
 
             WebElement loginBtn = driver.findElement(By.xpath("//button[text()='Sign in']"));
-            loginBtn.click();
+            loginBtn.click(); 
+            
 
             // DashBoard
             wait.until(ExpectedConditions.urlContains("https://app.eventhex.ai/event"));
@@ -73,13 +75,13 @@ public class ContributeAlbum {
              
              // Enter Phone Number
              WebElement phoneField = wait.until(
-                 ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@name='phone']"))
+             ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@name='phone']"))
              );
              phoneField.sendKeys("9746983352");
             
              // Enter Name
              WebElement nameField = wait.until(
-                 ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@type='text']"))
+             ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@type='text']"))
              );
              nameField.sendKeys("Nandhana");
 
@@ -91,7 +93,7 @@ public class ContributeAlbum {
              
              //image upload
              WebElement uploadInput = wait.until(
-            	        ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@type='file']")));
+             ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@type='file']")));
              
             	    // Provide your local file path here
              String filePath1 = "C:\\Users\\USER\\Downloads\\images.jpeg";
@@ -119,7 +121,7 @@ public class ContributeAlbum {
 
                 	    // Validate
                 	    if (pendingPhotos.size() > 0) {
-                	        System.out.println(pendingPhotos.size() + " photos are present in Pending list.");
+                	        System.out.println(pendingPhotos.size() + "photos are present in Pending list.");
                 	        for (WebElement photo : pendingPhotos) {
                 	            System.out.println("photos found in Pending list");
                 	        }
@@ -127,8 +129,7 @@ public class ContributeAlbum {
                 	        System.out.println("No photos found in Pending list!");
                 	    }
             	    	
-            	    	
-            	    	
+               	
         } catch (Exception e) {
             e.printStackTrace();
             System.out.println("Error occurred in Partners Spotlight automation!");
