@@ -16,7 +16,6 @@ public class ContributeAlbum {
 	public static void main(String[] args) {
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--use-fake-ui-for-media-stream");
-		
 
 	    WebDriver driver = new ChromeDriver(options);
 	    driver.manage().window().maximize();
@@ -114,9 +113,8 @@ public class ContributeAlbum {
                 	    pending.click();
                 	    
                 	 // Get all pending photos
-                	    List<WebElement> pendingPhotos = wait.until(
-                	    	    ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[contains(@class,'grid')]//img"))
-                	    	);
+                	    List<WebElement> pendingPhotos = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[contains(@class,'grid')]//img"))
+);
 
 
                 	    // Validate
