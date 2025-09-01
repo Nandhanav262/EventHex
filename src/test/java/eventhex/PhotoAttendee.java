@@ -30,7 +30,7 @@ public class PhotoAttendee {
 
             WebElement loginBtn = driver.findElement(By.xpath("//button[text()='Sign in']"));
             loginBtn.click();
-
+            
             // DashBoard
             wait.until(ExpectedConditions.urlContains("https://app.eventhex.ai/event"));
 

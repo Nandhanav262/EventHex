@@ -29,7 +29,7 @@ public class PartnersSpotlight {
 
             WebElement passwordField = driver.findElement(By.xpath("//input[@type='password']"));
             passwordField.sendKeys("Admin@EventHex");
-
+            
             WebElement loginBtn = driver.findElement(By.xpath("//button[text()='Sign in']"));
             loginBtn.click();
 
@@ -48,11 +48,10 @@ public class PartnersSpotlight {
             WebElement addBtn = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(.,'Add New')]")));
             ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", addBtn);
             addBtn.click();
-
-         // Enter Partner Name
+            
+            // Enter Partner Name
             WebElement partnerName = wait.until(
-                ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@placeholder='Partner Name']"))
-            );
+            ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@placeholder='Partner Name']")));
             partnerName.sendKeys("Test Partner Pvt Ltd");
 
             // Upload Logo
@@ -65,10 +64,8 @@ public class PartnersSpotlight {
 
             //Click Submit
             WebElement submitBtn = wait.until(
-                ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Submit']"))
-            );
+                ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Submit']")));
             submitBtn.click();
-
             System.out.println("Partner Spotlight added successfully!");
 
             

@@ -47,21 +47,20 @@ public class Watermark {
             
             // Choose File
             WebElement fileInput = wait.until(
-                    ExpectedConditions.presenceOfElementLocated(By.id("watermark-upload")));
-
+            ExpectedConditions.presenceOfElementLocated(By.id("watermark-upload")));
+            
             fileInput.sendKeys("C:\\Users\\USER\\Downloads\\download.jpeg");
             System.out.println("File uploaded successfully!");
 
-         // Set Opacity and Scale
+            // Set Opacity and Scale
             WebElement scaleInput = driver.findElement(By.xpath("//input[@type='number']"));
             scaleInput.clear();
             scaleInput.sendKeys("20"); 
-
+            
             //input box for opacity
          
             WebElement opacityInput = wait.until(
                 ExpectedConditions.visibilityOfElementLocated(By.cssSelector("input[type='range']")));
-
             Thread.sleep(1000);
     
 
