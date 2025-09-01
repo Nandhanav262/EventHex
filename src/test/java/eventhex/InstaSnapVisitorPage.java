@@ -101,7 +101,7 @@ public class InstaSnapVisitorPage extends InstaSnapPage {
                  } else {
                      System.out.println(" No photos found.Recheck...");
                      WebElement recheckBtn = driver.findElement(By.xpath("//button[contains(text(),'Recheck')]"));
-                     recheckBtn.click();
+                     recheckBtn.click(); 
                  }
              } catch (Exception e) {
                  System.out.println(" AI couldn't find any photos of you.");
