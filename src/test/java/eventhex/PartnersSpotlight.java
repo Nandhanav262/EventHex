@@ -46,24 +46,22 @@ public class PartnersSpotlight {
             addBtn.click();
 
          // Enter Partner Name
-            WebElement partnerName = wait.until(ExpectedConditions.visibilityOfElementLocated(
-                    By.xpath("//input[@placeholder='Partner Name']")));
-            partnerName.sendKeys("Automation Partner Pvt Ltd");
+            WebElement partnerName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@placeholder='Partner Name']")));
+            partnerName.sendKeys("Manual Partner Pvt Ltd");
 
             // Handle file upload (make hidden input visible)
             WebElement uploadInput = driver.findElement(By.xpath("//input[@type='file']"));
             ((JavascriptExecutor) driver).executeScript("arguments[0].style.display='block';", uploadInput);
 
-            File file1 = new File("C:\\Users\\USER\\Downloads\\download (1).jpeg");
+            File file1 = new File("C:\\Users\\USER\\Downloads\\images.jpeg");
             uploadInput.sendKeys(file1.getAbsolutePath());
 
             // Enter Link
             WebElement linkInput = driver.findElement(By.xpath("//input[@placeholder='Link']"));
-            linkInput.sendKeys("https://www.automationpartner.com");
+            linkInput.sendKeys("https://www.manualpartner.com");
 
             // Now wait for Submit button to be enabled
-            WebElement submitBtn = wait.until(ExpectedConditions.elementToBeClickable(
-                    By.xpath("//button[contains(.,'Submit')]")));
+            WebElement submitBtn = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(.,'Submit')]")));
             submitBtn.click();
 
             System.out.println("Partner spotlight added successfully");
