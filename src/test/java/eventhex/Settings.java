@@ -60,28 +60,12 @@ public class Settings {
 	                System.out.println("'Attendees' is still selected");
 	            }
 
-
-
 	        } catch (Exception e) {
 	            e.printStackTrace();
-	            System.out.println("Error occurred in upload/manage photos flow.");
+	            System.out.println("Error occurred");
 	        } finally {
 	            //driver.quit();
 	        }
 	    }
 	}
 	    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
